@@ -1,8 +1,12 @@
 numbers = [2, -93, -2, 8, None, -44, -1, -85, -14, 90, -22, -90, -100, -8, 38, -92, -45, 67, 53, 25]
-element= numbers[4]=0
-element=sum(numbers)/len(numbers)
-numbers[4]=element
 
+# TODO заменить значение пропущенного элемента средним арифметическим
+void = numbers.index(None)
+first = (numbers[:void])
+second = (numbers[void + 1:])
+summ_first = sum(first)
+summ_second = sum(second)
 
-
-print("Измененный список:", numbers)
+middle = (summ_first + summ_second) / len(numbers)
+numbers[void] = middle
+print("Измененный список:", numbers )
